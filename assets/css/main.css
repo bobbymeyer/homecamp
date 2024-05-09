@@ -1,0 +1,29 @@
+---
+---
+
+@import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Teachers', sans-serif;
+}
+
+.bento {
+    @apply h-full flex flex-col border border-black p-8;
+}
+
+a.bento {
+    @apply hover:bg-black hover:text-white transition-all duration-300 ease-in-out;
+}
+
+.title {
+    @apply text-3xl md:text-4xl xl:text-6xl bg-purple-600 tracking-wider text-white;
+}
+
+.date {
+    @apply text-lg lg:text-xl xl:text-2xl font-light justify-center;
+}

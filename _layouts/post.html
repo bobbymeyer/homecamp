@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  </head>
+  <body class="bg-slate-200">
+    <div class="container mx-auto md:mt-16 border border-black bg-slate-100">
+      
+      {% include nav.html %}
+      <div class="grid lg:grid-cols-3">
+        <h1 class="title bento lg:col-span-2">{{ page.title }}</h1>
+        {% assign future_date = page.date | date: "%s" | plus: 518400 | date: "%B %d, %Y" %}
+        <i class="bento date">{{ page.date | date: "%B %d, %Y" }} - {{ future_date }}</i>
+      </div>
+      {{ content }}
+    </div>
+  </body>
+</html>
